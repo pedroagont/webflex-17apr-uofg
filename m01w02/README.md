@@ -8,6 +8,10 @@
 - [ ] Arrow functions
 - [ ] Make our own higher order function
 
+### Video
+
+- [https://vimeo.com/822353856/45bfe784a2](https://vimeo.com/822353856/45bfe784a2)
+
 ### Functions as Values
 - Just like everything else in JavaScript, functions are values
 - As a result, they can be stored in variables just like any other value
