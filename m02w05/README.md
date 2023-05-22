@@ -8,7 +8,7 @@
 - [ ] Parallelizing async things (Promise.all)
 
 ### Video
-[https://vimeo.com/828646129/df3cdb66ea](https://vimeo.com/828646129/df3cdb66ea)
+[https://vimeo.com/828758325/09785dbb8a](https://vimeo.com/828758325/09785dbb8a)
 
 ### Promises
 - An object that may (or may not) resolve to a value in the future
