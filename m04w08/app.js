@@ -11,47 +11,90 @@ $(document).ready(() => {
 
   document.title = 'Hi from my file! 👋';
 
-  // How to select elements
+  // ------> HOW TO SELECT DOM ELEMENTS
+  // with vanilla js
   // const title = document.querySelector('h1');
   // const description = document.querySelector('.description');
-  const main = document.getElementById('main');
-  const myInput = document.getElementById('my-input');
-  // const myButton = document.getElementById('my-button');
+  // const main = document.getElementById('main');
+  // const myForm = document.getElementById('my-form');
   // const myList = document.getElementById('my-list');
+  // const myImgButton = document.getElementById('my-img-button');
+  // const myImg = document.getElementById('my-img');
 
-  // How to change the content of DOM elements
+  // with jquery
+  const title = $('h1');
+  const description = $('.description');
+  const main = $('#main');
+  const myForm = $('#my-form');
+  const myList = $('#my-list');
+  const myImgButton = $('#my-img-button');
+  const myImg = $('#my-img');
+
+  // ------> HOW TO CHANGE CONTENT
+  // with vanilla js
   // title.innerHTML = 'This title changed from JS 😱';
   // description.innerHTML = 'This is an awesome lecture! 🪄';
 
-  // jquery
-  $('h1').html('This title changed with jQuery!');
-  $('.description').text('This description is changed through jQuery');
+  // with jquery
+  title.text('This title changed from JS 😱');
+  description.html('This is an awesome lecture! 🪄');
 
-  // How to change styles
-  main.style.background = 'indigo';
+  // ------> HOW TO CHANGE STYLES
+  // with vanilla js
+  // main.style.background = 'tomato';
+  // main.style.color = 'black';
 
-  let topic = '';
+  // with jquery
+  main.css('background', 'tomato');
+  main.css('color', 'black');
 
-  // How to access events from elements
-  myInput.addEventListener('keyup', (event) => {
-    console.log(event); // the full event object
-    console.log(event.target); // the element that triggered that event
-    console.log(event.target.value); // the value typed in the input
+  // ------> HOW TO ACCESS TO EVENTS
+  // with vanilla js
+  // myForm.addEventListener('submit', (event) => {
+  //   event.preventDefault(); // to prevent page reloading when submitting
 
-    topic = event.target.value;
-  });
+  //   console.log(event); // the full event object
+  //   console.log(event.target); // the element that triggered that event
+  //   console.log(event.target.elements); // the input tags inside the form
+  //   console.log(event.target.elements.topic.value); // the value typed in the input with name="topic"
 
-  // myButton.addEventListener('click', (event) => {
-  //   console.log('clicked!');
+  //   // to add the new topic
+  //   const newTopic = event.target.elements.topic.value;
+  //   myList.innerHTML += `<li>${newTopic}</li>`;
 
-  //   myList.innerHTML += `<li>${topic}</li>`;
+  //   // to reset the form
+  //   event.target.reset();
   // });
 
-  const handleClick = (e) => {
-    // console.log('Clicked through jquery');
+  // with jquery
+  myForm.on('submit', (event) => {
+    event.preventDefault(); // to prevent page reloading when submitting
 
-    $('#my-list').append(`<li>${topic}</li>`);
-  };
+    console.log(event); // the full event object
+    console.log(event.target); // the element that triggered that event
+    console.log(event.target.elements); // the input tags inside the form
+    console.log(event.target.elements.topic.value); // the value typed in the input with name="topic"
 
-  $('#my-button').on('click', handleClick);
+    // to add the new topic
+    const newTopic = event.target.elements.topic.value;
+    myList.append(`<li>${newTopic}</li>`);
+
+    // to reset the form
+    event.target.reset();
+  });
+
+  // with vanilla js
+  // myImgButton.addEventListener('click', (event) => {
+  //   console.log('hello!');
+  //   myImg.src =
+  //     'https://www.allthingsdogs.com/wp-content/uploads/2020/10/Teacup-Pomeranian-Guide-What-To-Know-Before-Buying-Cover.jpg';
+  // });
+
+  // with jquery
+  myImgButton.click((event) => {
+    myImg.attr(
+      'src',
+      'https://www.allthingsdogs.com/wp-content/uploads/2020/10/Teacup-Pomeranian-Guide-What-To-Know-Before-Buying-Cover.jpg'
+    );
+  });
 });

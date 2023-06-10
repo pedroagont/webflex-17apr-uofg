@@ -7,7 +7,19 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  text-align: center;
+}
+
 main {
   padding: 1em;
   background: tomato;
+}
+
+.img-container {
+  max-width: 200px;
+}
+
+.img-container img {
+  width: 100%;
 }

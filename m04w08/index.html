@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Side Javascript & jQuery 🪄</title>
 
-    <!-- CSS as second -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css">
 
     <!-- External JS -->
@@ -20,25 +20,31 @@
 </head>
 
 <body>
-
     <header>
         <h1>Client Side Javascript & jQuery 🪄</h1>
         <p class="description">This is a description from the html!</p>
     </header>
 
     <main id="main">
-        <section>
-            <input id="my-input" type="text">
-            <button id="my-button">Add topic!</button>
-        </section>
+        <form id="my-form">
+            <input name="topic" type="text">
+            <button>Add topic!</button>
+        </form>
 
         <section>
-            <h2>I learned today about:</h2>
+            <h2>Today I learned about:</h2>
             <ul id="my-list">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
             </ul>
+        </section>
+
+        <section>
+            <button id="my-img-button">Click to change the image!</button>
+            <div class="img-container">
+                <img id="my-img" src="https://i.ytimg.com/vi/eeDb9wGK1bk/maxresdefault.jpg" alt="">
+            </div>
         </section>
     </main>
 
