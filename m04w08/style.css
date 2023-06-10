@@ -6,3 +6,8 @@ body {
 
   font-family: sans-serif;
 }
+
+main {
+  padding: 1em;
+  background: tomato;
+}
