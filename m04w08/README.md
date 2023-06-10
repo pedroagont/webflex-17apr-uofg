@@ -8,6 +8,9 @@
 - [ ] Event handling with jQuery
 - [ ] Document ready
 
+### Video
+[https://vimeo.com/835068313/4dd068bec7](https://vimeo.com/835068313/4dd068bec7)
+
 ### The **D**ocument **O**bject **M**odel
 - From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction):
   > The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
